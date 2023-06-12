@@ -2,21 +2,25 @@ export default [
     {
       question: "Voce se considera uma pessoa introvertida ou extrovertida??",
       answers: [
-        { option: "3", correct: 1 },
-        { option: "2", correct: 2 },
-        { option: "4", correct: 2 },
+        { option: "Introvertida", correct: 1 },
+        { option: "Extrovertida", correct: 2 },
+        { option: "Ambos", correct: 3 },
       ],
     },
     {
       question: "Qual sua caracteristica mais marcante??",
       answers: [
-        { option: "Um metamorfo", correct: 1},
-        { option: "Um basilico", correct: 3 },
-        { option: "Um Titã", correct: 2 },
+        { option: "Inteligencia", correct: 1},
+        { option: "Carisma", correct: 2 },
+        { option: "Seriedade", correct: 3 },
+        { option: "Paciencia", correct: 4 },
+        { option: "Precipitado/Impulsivo", correct: 5 },
+        { option: "Compreensivel", correct: 6 },
+        { option: "", correct: 7 },
       ],
     },
     {
-      question: "Teste?",
+      question: "Voce se considera inseguro?",
       answers: [
         { option: "800", correct: 2 },
         { option: "90", correct: 2 },
@@ -24,9 +28,9 @@ export default [
       ],
     },
     {
-      question: "Test2?",
+      question: "Qual seu maior medo??",
       answers: [
-        { option: "70", correct: 2 },
+        { option: "Descobrir algo que não queria sobre si mesmo", correct: 2 },
         { option: "56", correct: 2 },
         { option: "49", correct: 3 },
       ],
