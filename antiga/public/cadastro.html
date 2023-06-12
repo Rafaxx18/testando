@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cadastro.css">   <!-- ctrl + espaço (caminho dos arquivos) -->
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    <div class="header">  <!--div.header -->
+       <div class="container">
+      <a href="index.html"> <img src="./assets/the-owl-house-5eef59fdb8241.png" alt="" height="100px" width="250px"  ></a>
+                <!-- <h1 class="titulo">AcquaTec</h1>                -->
+                   
+                <ul class="navbar">
+                        <li>
+                            <a href="index.html"class="agora">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#">Temporadas</a>
+                        </li>
+                        <li>
+                           |
+                        </li>
+                        <li>
+                            <a href="login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="#">Cadastro</a>
+                        </li>
+                     </ul>            
+                
+            </div>
+      </div>  
+
+      <div class="banner">
+        <div class="container">
+         <div>
+           
+                <div class="retangulo-1">
+
+                    <div class="inputs-cad">
+                 <div>
+                    <div class="input-field">
+                   <label>usuario</label> <input id="nome_input"><br>
+                </div>
+                </div>
+
+                <div>
+                    <div class="input-field">
+                        <label>Email</label> <input id="email_input"><br>
+                </div>
+                </div>
+
+                <div>
+                    <div class="input-field">
+                        <label>Senha</label> <input  type='password' id="senha_input"><br>
+                   </div>
+                </div>
+                   <!-- Gênero 
+                    <input type="radio" name='genero' id="masculino" value="masculino"
+                           checked>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name='genero'id="feminino" value="feminino">
+                      <label for="feminino">Feminino</label> 
+                      <input type="radio" name="genero" id="outro" value="outro">
+                      <label for="feminino">Outro</label>  -->
+
+                    </div>
+                <div class="botao">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+                </div>
+                
+           
+         </div>
+        <div>
+         
+        </div>
+    </div>
+      </div>
+      <!-- <div class="info"> -->
+   
+</body>
+</html>
+
+
+<script>
+    function cadastrar() {
+       
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+      
+
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+       
+            return false;
+        }
+        else {
+           
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+               
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+              
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+              
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+         
+        });
+
+        return false;
+    }
+
+   
+
+</script>

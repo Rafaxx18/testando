@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Security Survey</title>
+  <meta name="description" content="Survey">
+  <meta name="author" content="Luke Lehane">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container1">	
+    <div class="row">
+  	  <div class="two-thirds column">
+        <h2>Security Survey</h2>
+
+        <div id="progress_bar"></div>
+  	  	<form class="questions_box">
+
+  	  		<div id="question-1">
+  	  		  <h2>Questão 1</h2>
+  	  			<h3>Voce se considera uma pessoa introvertida ou extrovertida?</h3>
+  	  			<input id="question-1-answer-a" type="radio" name="favelang" value=1> Introvertida<br>
+  				  <input id="question-1-answer-b" type="radio" name="favelang" value=2> extrovertida<br>
+  				  <input id="question-1-answer-c" type="radio" name="favelang" value=3> Ambos<br>
+  				  <div id="submit1" class="button">Enviar Resposta</div>
+            <div class="clearfix"></div>
+  			  </div>
+
+  			 <div id="question-2">
+  				 <h2>Questão 2</h2>
+  				 <h3>Qual sua caracteristica mais marcante?</h3>
+  	  		 <input id="question-2-answer-a" type="radio" name="favelang" value="1"> Coragem e lealdade<br>
+  				 <input id="question-2-answer-b" type="radio" name="favelang" value="2"> Divertido(a) e tagarela<br>
+  				 <input id="question-2-answer-c" type="radio" name="favelang" value="3"> Sério e focado<br>
+                   <input id="question-2-answer-d" type="radio" name="favelang" value="4"> Compreensivel e bom ouvinte<br>
+                   <input id="question-2-answer-e" type="radio" name="favelang" value="5"> Calmo e quieto<br>
+                   <input id="question-2-answer-f" type="radio" name="favelang" value="6"> Otimista e precipitado<br>
+                   <input id="question-2-answer-g" type="radio" name="favelang" value="7"> Sincero e realista <br>
+  				 <div id="submit2" class="button">Enviar Resposta</div>
+           <div class="clearfix"></div>
+  			 </div>
+  			
+  			 <div id="question-3">	
+  				 <h2>Questão 3</h2>
+  				 <h3>Voce se considera inseguro?</h3>
+  	  		 <input id="question-3-answer-a" type="radio" name="favelang" value="1"> Sim<br>
+  				 <input id="question-3-answer-b" type="radio" name="favelang" value="2"> não<br>
+  				 <input id="question-3-answer-c" type="radio" name="favelang" value="3"> As vezes<br>
+  				 <div id="submit3" class="button">Enviar Resposta</div>
+           <div class="clearfix"></div>
+  			 </div>
+
+         <div id="question-4">
+            <h2>Questão 4</h2>
+            <h3>O que vc gosta de fazer no tempo livre?</h3>
+            <input id="question-1-answer-a" type="radio" name="favelang" value="1"> Sair para algum lugar novo <br>
+            <input id="question-1-answer-b" type="radio" name="favelang" value="2"> Ler algo <br>
+            <input id="question-1-answer-c" type="radio" name="favelang" value="3"> Cuidar de plantas<br>
+            <input id="question-1-answer-d" type="radio" name="favelang" value="4"> Maratonar alguma série<br>
+            <input id="question-1-answer-e" type="radio" name="favelang" value="5"> <br> <input id="question-1-answer-f" type="radio" name="favelang" value="6"> Tocar algum instrumento<br>
+            <div id="submit4" class="button">Enviar Resposta</div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div id="question-5">
+            <h2>Questão 5</h2>
+            <h3>Qual seu maior medo?</h3>
+            <input id="question-1-answer-a" type="radio" name="favelang" value="1"> Descobrir algo que não queria sobre si mesmo<br>
+            <input id="question-1-answer-b" type="radio" name="favelang" value="2"> Machucar aqueles que voce ama<br>
+            <input id="question-1-answer-c" type="radio" name="favelang" value="3"> Não ser suficiente para os outros<br>
+            <input id="question-1-answer-d" type="radio" name="favelang" value="4"> Ser mediocre em algo que voce gosta<br>
+            <div id="submit5" class="button">Enviar Resposta</div>
+            <div class="clearfix"></div>
+          </div>
+
+         <div id="question-6"> 
+           <h2>Obrigado por responder a pesquisa!</h2>
+           <h3>Seu score de segurança é: </h3>
+           <h1 id=printtotalscore></h1>
+           <p id=printscoreinfo></p>
+
+         </div>
+
+
+  				
+  	  	</form>
+
+  	  </div>
+  	</div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

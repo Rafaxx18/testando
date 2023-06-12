@@ -1,0 +1,139 @@
+body{
+    margin:0;  /* o que tem na pag até o final fora de uma div */
+    padding: 0; /* as bordas dentro de uma div*/
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #160539(255, 255, 255);
+}
+
+.container{
+
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header{
+    
+    background-color: #2b105036;
+    background-image: linear-gradient(to bottom, #340B6B, #4c109b, #6615D1 );
+    background-color: #2b105036;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px #4c109b solid ; /* bottom pra especificar o lado de baixo do retangulo*/
+}
+
+.header .container{
+    height: 14vh;
+ /* esse estilo só serve para containers que estão dentro desse header */
+     justify-content: space-between;
+}
+
+.header a{
+    text-decoration: none;
+    color: #f8f8f8;
+    padding: 10px;
+}
+
+.agora{
+    font-weight: 800;
+}
+
+img{
+    width: 29vh;
+    height: 12vh;
+    top: 2px;
+    padding: 4px;
+}
+
+.navbar{
+    width: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+.titulo{
+    color: #32b9cd;
+    width: fit-content;
+    font-weight: 500;
+}
+
+.banner{
+    width: auto;
+ height: 100vh;
+    padding: 40px 0; /* ordem: top, right, bottom, left*/
+    background-color: #160539;
+    background-image: url('../asset/quarto1.jpg'); 
+    background-size: cover;
+}
+
+/* casinha e texto da home */
+.banner .container{
+    padding-top: 9vh; 
+    height: 900px;
+    font-size: 36px;
+    align-items: center;
+}
+
+
+
+.banner p{
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.banner img{
+
+display: flex;
+justify-content: center;
+}
+
+
+ .retangulo{
+    justify-content: center;
+position: absolute;
+width: 170vh;
+height: 67vh;
+left: 32vh;
+top: 20vh;
+}
+
+/* Rectangle 1 */
+.retangulo-1{
+justify-content: center;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+background: rgba(255, 255, 255, 0.66);
+border-radius: 57px;
+}
+
+
+/* Você terá acesso as informaçoẽs dos seus personagens favoritos */
+.retangulo-1 p{
+position: absolute;
+width: 300px;
+height: 138px;
+left: 154px;
+top: 160px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 40;
+font-size: 22.7264px;
+line-height: 28px;
+
+color: #000000;
+}
+
+.retangulo input{
+    border-radius: 20% 10%;
+}

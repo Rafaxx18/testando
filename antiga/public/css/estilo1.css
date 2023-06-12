@@ -1,0 +1,346 @@
+body{
+    margin:0;  /* o que tem na pag até o final fora de uma div */
+    padding: 0; /* as bordas dentro de uma div*/
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #160539(255, 255, 255);
+}
+
+.container{
+
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.bolhas{
+    position: absolute;
+}
+
+.bolhas spam{
+    width: 30px;
+    height: 30px;    height: 30px;
+
+    background:#ffee52;
+    margin: 0 4px;
+    border-radius: 50%;
+ ;
+
+}
+
+.header{
+    background-color: #2b105036;
+    background-image: linear-gradient(to bottom, #340B6B, #4c109b, #6615D1 );
+    background-color: #2b105036;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px #4c109b solid ; /* bottom pra especificar o lado de baixo do retangulo*/
+}
+
+.header .container{
+ /* esse estilo só serve para containers que estão dentro desse header */
+     justify-content: space-between;
+}
+
+.header a{
+    text-decoration: none;
+    color: #f8f8f8;
+    padding: 10px;
+}
+
+.agora{
+    font-weight: 800;
+}
+
+.header img{
+    width: 29vh;
+    height: 12vh;
+    padding: 4px;
+}
+
+.navbar{
+    width: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+.titulo{
+    color: #32b9cd;
+    width: fit-content;
+    font-weight: 500;
+}
+
+.banner{
+    height: fit-content;
+    padding: 40px 0; /* ordem: top, right, bottom, left*/
+    background-color: #160539;
+    /* background-image: url('asset/casa2.jpg'); */
+    background-size: cover
+    ;
+}
+
+/* casinha e texto da home */
+.banner .container{
+    padding-top: 9vh; 
+    height: 500px;
+    font-size: 36px;
+    align-items: center;
+}
+
+
+
+.banner p{
+    height: fit-content;
+    font-size: 4vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.banner img{
+display: flex;
+justify-content: end;
+}
+
+.banner .container spam{
+    font-weight: 800;
+}
+
+.teste{
+    background-color: #f5dee6;
+    color: #e6005a;
+    font-family: Barlow;
+    width: 400px;
+   border-radius: 2px;
+  
+}
+
+.teste .fonte{
+    color: #e6005a;
+    font-family: Barlow;
+    font-size: 35px;
+ 
+  
+}
+
+.botao{
+    align-items: center;
+justify-content: center;
+    color: #f5dee6;
+    background-color : #e6005a;
+    font-family: Barlow;
+    font-size: medium;
+    border-radius: 5px;
+    padding: 10px;
+  
+}
+
+.input{
+  justify-content: center;
+  align-items: center;
+    
+}
+
+.rodape{
+    background-color:  #32B9CD;
+    justify-items: flex-end;
+    align-items: center;
+    color: white;
+     display: flex;
+    width: 15000px;
+    height: 500px;
+    font-size: medium;
+
+}
+.rodape p{
+  
+    justify-items: center;
+    align-items: center;
+     display: flex;
+     font-family: Barlow;
+}
+
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20vh;
+   backdrop-filter: blur(23px);
+
+}
+
+.mid{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #160539;
+    flex-direction: column;
+
+}
+/* Rectangle 1 */
+ .retangulo{
+    /* justify-content: center;
+position: absolute;
+width: 177vh;
+height: 47vh;
+left: 25vh;
+top: 129vh; */
+display: flex;
+justify-items: center;
+
+
+}
+
+/* Rectangle 1 */
+.retangulo-1{
+    display: flex;
+justify-content: center;
+/* position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%; */
+width: 150vh;
+height: 45vh;
+background: rgba(255, 255, 255, 0.66);
+border-radius: 57px;
+}
+
+
+/* Você terá acesso as informaçoẽs dos seus personagens favoritos */
+.retangulo-1 p{
+/* position: absolute;
+width: 300px;
+height: 138px;
+left: 154px;
+top: 160px; */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 40;
+font-size: 22.7264px;
+line-height: 28px;
+
+color: #000000;
+}
+
+
+.info .container{
+
+}
+
+.sla{
+height: 70vh;
+width: 100%;
+display: flex;
+justify-content: center;
+    background-color:#160539;
+}
+
+.novidade{
+    /* Rectangle 5 */
+justify-content: center;
+/* position: absolute; */
+width: 100%;
+height: 230vh;
+/* left: 0px; */
+
+background: #D9D9D9;
+}
+
+/* Rectangle 6 */
+.carrossel{
+/* position: absolute;
+width: 185vh;
+height: 85vh;
+left: 24vh;
+top: 27vh; */
+align-items: center;
+
+width: 200vh;
+height: 90vh;
+margin-top: 11vh;
+margin-bottom: 20vh;
+
+background: url('../assets/toh-king-and-luz.png');
+border-radius: 21px;
+
+}
+
+.center{
+    display: flex;
+    justify-content:center
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+
+}
+
+.cards{
+    display:flex;
+    justify-content: space-around;
+}
+/* Rectangle 10 */
+.card1{
+/* position: absolute; */
+display: flex;
+justify-content: space-around;
+width: 332px;
+height: 420px;
+/* left: 25vh; */
+/* top: 130vh; */
+
+background: #2C0743;
+border-radius: 35px;
+}
+
+.card2{
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-around;
+    width: 332px;
+    height: 420px;
+    /* left: 89vh; */
+    /* top: 130vh; */
+    
+    background: #2C0743;
+    border-radius: 35px;
+    }
+
+    .card3{
+        /* position: absolute; */
+        display: flex;
+        justify-content: space-around;
+        width: 332px;
+        height: 420px;
+        left: 120vh;
+        top: 130vh;
+        
+        background: #2C0743;
+        border-radius: 35px;
+        
+    }
+
+.final{
+    width: 100%;
+    height: 90vh;
+    background-color: #160539;
+ 
+ 
+}
+
+.inputs-cad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
