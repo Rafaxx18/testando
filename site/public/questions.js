@@ -1,34 +1,34 @@
 export default [
     {
-      question: "Quanto é 1 + 2?",
+      question: "Voce se considera uma pessoa introvertida ou extrovertida??",
       answers: [
-        { option: "3", correct: true },
-        { option: "2", correct: false },
-        { option: "4", correct: false },
+        { option: "3", correct: 1 },
+        { option: "2", correct: 2 },
+        { option: "4", correct: 2 },
       ],
     },
     {
-      question: "Quanto é 5 x 2?",
+      question: "Qual sua caracteristica mais marcante??",
       answers: [
-        { option: "9", correct: false },
-        { option: "10", correct: true },
-        { option: "11", correct: false },
+        { option: "Um metamorfo", correct: 1},
+        { option: "Um basilico", correct: 3 },
+        { option: "Um Titã", correct: 2 },
       ],
     },
     {
-      question: "Quanto é 10 x 8?",
+      question: "Teste?",
       answers: [
-        { option: "800", correct: false },
-        { option: "90", correct: false },
-        { option: "80", correct: true },
+        { option: "800", correct: 2 },
+        { option: "90", correct: 2 },
+        { option: "80", correct: 3 },
       ],
     },
     {
-      question: "Quanto é 7 x 7?",
+      question: "Test2?",
       answers: [
-        { option: "70", correct: false },
-        { option: "56", correct: false },
-        { option: "49", correct: true },
+        { option: "70", correct: 2 },
+        { option: "56", correct: 2 },
+        { option: "49", correct: 3 },
       ],
     },
   ];

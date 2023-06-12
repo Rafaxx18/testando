@@ -174,7 +174,7 @@ body {
   flex-direction: column;
   justify-content: start;
 }
-
+/* 
 .botao {
   cursor: pointer;
   font-family: "Barlow", sans-serif;
@@ -187,7 +187,7 @@ body {
   width: 120px;
   height: 30px;
   align-self: center;
-}
+} */
 
 .loading-div {
   width: 50px;

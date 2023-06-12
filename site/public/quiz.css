@@ -21,13 +21,20 @@ body h2 {
   color: white;
 }
 
+.center{
+  padding-top: 10vh;
+  width: 125vh;
+  height: 75vh;
+}
+
 main {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
   width: 100%;
-  max-width: 300px;
-  min-height: 200px;
+  max-width: 130vh;
+  min-height: 65vh;
+  max-height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
