@@ -1,18 +1,30 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idVoto, limite_linhas) {
+function buscarUltimasMedidas(idVoto) {
 
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select qtdVotos  from votos  where idVoto = ${idVoto}
-            order by qtdVotos `
-        } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-                instrucaoSql = `select qtdVotos 
-                             from votos
-                            where idVoto = ${idVoto}
-                             order by idVoto desc limit ${limite_linhas}`;
-    
+        instrucaoSql = `select  top ${limite_linhas}
+                 qtdVotos  
+                from votos  
+                 where idVoto = ${idVoto}
+                 order by qtdVotos asc`
+        } 
+        
+          
+        else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+            if(idVoto == 1){       
+                instrucaoSql = `  select nome, count(nome) as VOTO
+                from votos
+                group by nome;`;
+        }else{
+                        instrucaoSql = `  select resultado, count(resultado) as PNG
+                        from quiz
+                         group by resultado;`; 
+        }
+     
+                            
     
     //select top ${limite_linhas}
     //     dht11_temperatura as temperatura, 
