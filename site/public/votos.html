@@ -1,0 +1,121 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/home.css">   <!--ctrl + espaço (caminho dos arquivos)-->
+
+</head>
+<body>
+    <div class="header">  <!--div.header -->
+       <div class="container">
+        <img src="./assets/the-owl-house-5eef59fdb8241.png" alt="" height="100px" width="250px" >
+                <!-- <h1 class="titulo">AcquaTec</h1>                -->
+                  
+                <ul class="navbar">
+                        <li>
+                            <a href="index.html"class="agora">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#">Temporadas</a>
+                        </li>
+                        <li>
+                           |
+                        </li>
+                        <li>
+                            <a href="login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.html">Cadastro</a>
+                        </li>
+                     </ul>            
+                
+            </div>
+      </div> 
+
+    <div class="fundo">
+      <div class="central">
+        <div class="container2">	
+          
+                <div>
+                    <input id="gelo" type="radio" name="favelang" value="gelo"> Coragem e lealdade<br>
+                    <input id="planta" type="radio" name="favelang" value="planta"> Divertido(a) e tagarela<br>
+                    <input id="luz" type="radio" name="favelang" value="luz"> Sério e focado<br>
+                    <input id="fogo" type="radio" name="favelang" value="fogo"> Sério e focado<br>
+                    <button onclick="votar()">Enviar Resposta</div>
+                </div>    
+             
+        
+                          
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+</body>
+</html>
+<script>
+    function votar(){
+            var geloVar = gelo.value
+            var fogoVar = fogo.value
+            var luzVar = luz.value
+            var plantaVar = planta.value
+            var resultadoVar = 0;
+
+            if(plantaVar != '' ){
+                resultadoVar =plantaVar;
+
+            }else if(fogoVar != '' ){
+                resultadoVar = fogoVar;
+
+            }else if(geloVar != '' ){
+                resultadoVar = fogoVar;
+
+            }else if(luzVar != '' ){
+                resultadoVar = luzVar;
+          }
+
+
+        // Enviando o valor da nova input
+        fetch("/medidas/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                resultadoServer: resultadoVar,
+               
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+              
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+              
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+         
+        });
+
+        return false;
+
+    }
+</script>

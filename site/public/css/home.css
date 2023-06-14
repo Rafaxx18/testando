@@ -142,3 +142,33 @@ justify-content: center;
     width: 170vh;
     height: auto;
 }
+
+.fundo2{
+    background-color: white;
+}
+
+.div1{
+    display: flex;
+   padding-left: 20vh;
+    width: 180vh;
+}
+
+.img img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155vh;
+    height: 55vh;
+    padding-left: 35vh;
+    padding-top: 5vh;
+}
+
+p{
+    font-weight: 460;
+    font-family:monospace, Arial, Helvetica, sans-serif
+}
+
+.circulo {
+    border-radius: 67%;
+    height: 12vh;
+}

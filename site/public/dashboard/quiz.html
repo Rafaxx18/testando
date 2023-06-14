@@ -245,6 +245,7 @@ submit5.addEventListener('click', function(){
 function growProgressBar(percentage_width){
     var bar = document.getElementById("progress_bar");
     bar.style.width = percentage_width;
+    console.log(score_info);
 
 }
 
@@ -254,12 +255,20 @@ function cadastrar() {
        //Recupere o valor da nova input pelo nome do id
        // Agora vá para o método fetch logo abaixo
        var scoreVar = score_info;
-       var fkUsuarioVar = sessionStorage.ID_USUARIO ;
-     
+     console.log(score_info);
 
+     if (scoreVar == ""  ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
+       
+            return false;
+        }
+        else {
+           
+        }
        // Enviando o valor da nova input
-       fetch("/medidas/Verificar", {
+       fetch("/medidas/cadastrar", {
            method: "POST",
            headers: {
                "Content-Type": "application/json"
@@ -268,7 +277,6 @@ function cadastrar() {
                // crie um atributo que recebe o valor recuperado aqui
                // Agora vá para o arquivo routes/usuario.js
                scoreServer: scoreVar,
-              fkUsuarioServer: fkUsuarioVar,
                
               
                
@@ -282,6 +290,7 @@ function cadastrar() {
               //  setTimeout(() => {
               //      window.location = "#.html";
               //  }, "8000")
+alert()
               //  limparFormulario();
              
            } else {

@@ -22,7 +22,7 @@ export default [
     {
       question: "Voce se considera inseguro?",
       answers: [
-        { option: "800", correct: 2 },
+        { option: "800", correct: 1},
         { option: "90", correct: 2 },
         { option: "80", correct: 3 },
       ],
@@ -30,9 +30,17 @@ export default [
     {
       question: "Qual seu maior medo??",
       answers: [
-        { option: "Descobrir algo que não queria sobre si mesmo", correct: 2 },
+        { option: "Descobrir algo que não queria sobre si mesmo", correct: 1 },
         { option: "56", correct: 2 },
         { option: "49", correct: 3 },
       ],
     },
-  ];
+{
+  question: "SLAA?",
+  answers: [
+    { option: "Descobrir algo que não queria sobre si mesmo", correct: 1 },
+    { option: "56", correct: 2 },
+    { option: "49", correct: 3 },
+  ],
+},
+];
